@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#061611">
+    <title>Grunt's Way Home</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main id="game" class="game" aria-live="polite">
+      <div class="scene-bg" id="sceneBg"></div>
+      <div class="vignette" id="vignette"></div>
+      <div class="fireflies" id="fireflies" aria-hidden="true"></div>
+      <section id="titleScreen" class="title-screen screen active">
+        <div class="title-copy">
+          <h1>Grunt's Way Home</h1>
+          <p>He's lost. You don't speak Caveman. Help him anyway.</p>
+        </div>
+        <button id="startBtn" class="primary big">Tap to Start</button>
+      </section>
+
+      <section id="playScreen" class="play-screen screen" aria-label="Game scene">
+        <header class="hud">
+          <button id="restartBtn" class="icon-btn" type="button" aria-label="Restart game">Restart</button>
+          <div id="sceneLabel" class="scene-label"></div>
+          <button id="muteBtn" class="icon-btn" type="button" aria-label="Toggle sound">Sound</button>
+        </header>
+
+        <div class="narration" id="narration"></div>
+        <div class="stage" id="stage">
+          <div id="sceneProps" class="scene-props"></div>
+          <div id="pathChoices" class="path-choices" hidden></div>
+          <div class="caveman-wrap" id="cavemanWrap">
+            <div id="caveBubble" class="bubble cave-bubble">
+              <div id="gruntText" class="grunt-text"></div>
+              <div id="caveGlyphs" class="glyph-line"></div>
+            </div>
+            <img id="caveman" class="caveman" src="assets/caveman-idle.png" alt="Lost caveman">
+          </div>
+          <div id="playerBubble" class="bubble player-bubble">
+            <span>Your reply</span>
+            <div id="replyGlyphs" class="glyph-line empty">Tap stones</div>
+          </div>
+          <div id="hintToast" class="hint-toast" role="status"></div>
+        </div>
+
+        <div class="trust-row" id="trustRow" aria-label="Trust hearts"></div>
+
+        <section class="talk-panel" aria-label="Talk Stones">
+          <div id="stones" class="stones"></div>
+          <div class="talk-actions">
+            <button id="clearBtn" class="secondary" type="button">Clear</button>
+            <button id="sayBtn" class="primary" type="button">Say it</button>
+            <button id="dictBtn" class="secondary" type="button">Dictionary</button>
+          </div>
+        </section>
+      </section>
+
+      <section id="endingScreen" class="ending-screen screen" aria-label="Ending">
+        <div class="ending-card">
+          <h2>He's home!</h2>
+          <p>The jungle has learned your kindness, and Grunt has learned your signs.</p>
+          <div id="stats" class="stats"></div>
+          <button id="replayBtn" class="primary big" type="button">Replay</button>
+        </div>
+      </section>
+
+      <aside id="dictionary" class="dictionary" aria-label="Grunt Dictionary" aria-hidden="true">
+        <div class="dict-handle"></div>
+        <div class="dict-head">
+          <h2>Grunt Dictionary</h2>
+          <button id="closeDictBtn" class="icon-btn" type="button" aria-label="Close dictionary">Close</button>
+        </div>
+        <div id="dictList" class="dict-list"></div>
+      </aside>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
