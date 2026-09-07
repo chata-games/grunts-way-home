@@ -3,8 +3,12 @@
   "configurations": [
     {
       "name": "game",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["-y", "serve", "-l", "4173", "."],
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "4173"
+      ],
       "port": 4173
     }
   ]

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Lora;
+  src: url("./lora.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: Nunito;
+  src: url("./nunito.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 200 1000;
+  font-display: swap;
+}
